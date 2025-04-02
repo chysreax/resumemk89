@@ -1,0 +1,219 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #005f73; /* Teal dark */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #ee9b00; /* Orange accent */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1em;
+    color: #e9d8a6; /* Light gold */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #0a9396; /* Medium teal */
+    color: #e9d8a6; 
+    font-size: 0.9em;
+}
+
+/* Topic Section Styling */
+.topic-section {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #0a9396; /* Medium teal accent */
+}
+
+.topic-section h2 {
+    color: #005f73; /* Teal dark */
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e9d8a6; /* Light gold */
+    padding-bottom: 10px;
+}
+
+.sub-cpmk {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Accordion (Details/Summary) Styling */
+.content-detail {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdfd; /* Slightly off-white */
+    transition: background-color 0.3s ease;
+}
+
+.content-detail[open] {
+     background-color: #e9f5f5; /* Light teal when open */
+}
+
+
+.content-detail summary {
+    padding: 15px;
+    font-weight: 600;
+    color: #0077b6; /* Blue */
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+    list-style: none; /* Remove default marker */
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.content-detail summary:hover {
+    background-color: #e0f7fa; /* Lighter blue on hover */
+}
+
+/* Custom marker for accordion */
+.content-detail summary::before {
+    content: '+';
+    position: absolute;
+    left: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0077b6;
+    transition: transform 0.3s ease;
+}
+
+.content-detail[open] summary::before {
+   transform: rotate(45deg);
+   color: #d00000; /* Red when open */
+}
+
+/* Hide default marker in Webkit browsers */
+.content-detail summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.content-block {
+    padding: 15px 20px 20px 35px; /* Added left padding */
+    border-top: 1px solid #eee;
+    background-color: #fff; /* White background for content */
+}
+
+.content-block p, 
+.content-block ul, 
+.content-block ol {
+    margin-bottom: 1em;
+}
+
+.content-block ul, 
+.content-block ol {
+    padding-left: 20px;
+}
+
+.content-block li {
+    margin-bottom: 0.5em;
+}
+
+.content-block strong {
+    color: #005f73; /* Teal dark */
+}
+
+.content-block code, .content-block p > code {
+    background-color: #eef;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+
+/* Interactive Section Styling */
+.interactive-section {
+    background-color: #e9d8a6; /* Light gold */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 2px dashed #005f73; /* Teal dashed border */
+}
+
+.interactive-section h2 {
+    color: #005f73;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quiz-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.toggle-answer-btn {
+    background-color: #0a9396; /* Medium teal */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.toggle-answer-btn:hover {
+    background-color: #005f73; /* Darker teal on hover */
+}
+
+.answer {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #ee9b00; /* Orange accent */
+    color: #333;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .topic-section {
+        padding: 15px;
+    }
+    .content-block {
+         padding: 10px 15px 15px 25px;
+    }
+     .content-detail summary {
+        padding: 12px 15px 12px 30px; /* Adjust padding for smaller screens */
+    }
+}
