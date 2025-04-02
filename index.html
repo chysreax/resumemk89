@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Materi Keuangan Perusahaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ringkasan Materi Keuangan Perusahaan</h1>
+        <p>Berdasarkan Silabus (Referensi: Ross, Westerfield, Jordan, Lim, Tan - Fundamentals of Corporate Finance, Bab 11, 12, & 13)</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- ================== Materi 8: Analisis Keandalan Arus Kas & NPV ================== -->
+        <section class="topic-section">
+            <h2>Topik 8: Analisis & Evaluasi Keandalan Hasil Perhitungan Arus Kas dan NPV (Referensi: Ross Bab 11)</h2>
+            <p class="sub-cpmk"><strong>Sub CPMK:</strong> Menganalisis dan mengevaluasi keandalan (<em>reliability</em>) hasil perhitungan arus kas dan NPV.</p>
+            
+            <details class="content-detail">
+                <summary>1. Analisis Skenario (Scenario Analysis)</summary>
+                <div class="content-block">
+                    <p>Analisis skenario mengevaluasi NPV proyek investasi dalam kondisi atau skenario yang berbeda (misalnya, kasus terbaik, kasus dasar/normal, dan kasus terburuk). Ini membantu manajer memahami rentang kemungkinan hasil.</p>
+                    <ul>
+                        <li><strong>Kasus Dasar (Base Case):</strong> Menggunakan estimasi arus kas yang paling mungkin terjadi.</li>
+                        <li><strong>Kasus Terbaik (Best Case):</strong> Menggunakan estimasi optimis untuk variabel kunci (misalnya, volume penjualan tinggi, harga jual tinggi, biaya rendah).</li>
+                        <li><strong>Kasus Terburuk (Worst Case):</strong> Menggunakan estimasi pesimis untuk variabel kunci (misalnya, volume penjualan rendah, harga jual rendah, biaya tinggi).</li>
+                    </ul>
+                    <p>Dengan menghitung NPV untuk setiap skenario, kita dapat melihat seberapa sensitif hasil proyek terhadap perubahan kondisi ekonomi atau pasar secara keseluruhan.</p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>2. Analisis Sensitivitas (Sensitivity Analysis)</summary>
+                <div class="content-block">
+                    <p>Analisis sensitivitas menguji dampak perubahan satu variabel input terhadap NPV proyek, sementara variabel lainnya dianggap konstan (<em>ceteris paribus</em>). Ini membantu mengidentifikasi variabel mana yang paling kritis mempengaruhi kesuksesan proyek.</p>
+                    <p>Contoh variabel yang sering diuji:</p>
+                    <ul>
+                        <li>Volume Penjualan</li>
+                        <li>Harga Jual per Unit</li>
+                        <li>Biaya Variabel per Unit</li>
+                        <li>Biaya Tetap</li>
+                        <li>Biaya Modal (Discount Rate)</li>
+                    </ul>
+                    <p>Hasilnya sering disajikan dalam bentuk tabel atau grafik yang menunjukkan bagaimana NPV berubah ketika satu variabel menyimpang dari nilai dasarnya.</p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>3. Analisis Titik Impas (Break-Even Analysis)</summary>
+                <div class="content-block">
+                    <p>Analisis titik impas menentukan tingkat output (biasanya volume penjualan) di mana proyek mulai menghasilkan keuntungan atau menutupi biayanya. Ada beberapa jenis titik impas:</p>
+                    <ul>
+                        <li><strong>Titik Impas Akuntansi (Accounting Break-Even):</strong> Tingkat penjualan di mana Laba Bersih (Net Income) sama dengan nol. Mudah dihitung tetapi mengabaikan nilai waktu uang dan tidak menjamin penciptaan nilai (NPV bisa negatif).
+                            <br> Rumus Umum: Q = (Biaya Tetap + Depresiasi) / (Harga Jual per unit - Biaya Variabel per unit)</li>
+                        <li><strong>Titik Impas Kas (Cash Break-Even):</strong> Tingkat penjualan di mana Arus Kas Operasi (Operating Cash Flow - OCF) sama dengan nol. Menunjukkan tingkat penjualan minimum agar perusahaan tidak kehabisan kas dari operasi proyek.
+                            <br> Rumus Umum: Q = Biaya Tetap / (Harga Jual per unit - Biaya Variabel per unit) --- (Mengabaikan Depresiasi karena non-kas)</li>
+                        <li><strong>Titik Impas Finansial (Financial Break-Even):</strong> Tingkat penjualan di mana NPV proyek sama dengan nol. Ini adalah titik impas yang paling relevan dari sudut pandang keuangan karena mempertimbangkan biaya modal dan nilai waktu uang. Tingkat penjualan ini menghasilkan tingkat pengembalian yang diminta investor. Biasanya dihitung menggunakan trial-and-error atau fungsi Goal Seek/Solver.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>4. Degree of Operating Leverage (DOL)</summary>
+                <div class="content-block">
+                    <p><em>Degree of Operating Leverage</em> (DOL) mengukur sensitivitas Arus Kas Operasi (OCF) atau Laba Sebelum Bunga dan Pajak (EBIT) terhadap perubahan volume penjualan. DOL yang tinggi menunjukkan bahwa perubahan kecil dalam penjualan akan menghasilkan perubahan besar dalam OCF/EBIT.</p>
+                    <p>DOL berkaitan erat dengan struktur biaya perusahaan, khususnya proporsi biaya tetap terhadap biaya variabel.</p>
+                    <ul>
+                        <li>Perusahaan dengan biaya tetap tinggi (dan biaya variabel rendah) cenderung memiliki DOL yang tinggi.</li>
+                        <li>DOL yang tinggi memperbesar dampak positif dari kenaikan penjualan, tetapi juga memperbesar dampak negatif dari penurunan penjualan.</li>
+                    </ul>
+                    <p>Rumus Umum DOL pada tingkat penjualan Q:</p>
+                    <p>DOL = 1 + (Biaya Tetap / OCF)</p>
+                    <p>Atau, dalam persentase perubahan:</p>
+                    <p>DOL = (% Perubahan OCF) / (% Perubahan Penjualan)</p>
+                </div>
+            </details>
+
+             <details class="content-detail">
+                <summary>5. Konsep Capital Rationing</summary>
+                <div class="content-block">
+                    <p><em>Capital Rationing</em> terjadi ketika perusahaan memiliki proyek-proyek dengan NPV positif tetapi tidak memiliki cukup dana untuk mendanai semuanya.</p>
+                    <ul>
+                        <li><strong>Soft Rationing:</strong> Batasan dana bersifat internal, ditetapkan oleh manajemen (misalnya, batasan anggaran departemen).</li>
+                        <li><strong>Hard Rationing:</strong> Perusahaan tidak dapat memperoleh pendanaan dari pasar eksternal (misalnya, karena kondisi pasar yang buruk atau kelayakan kredit yang rendah).</li>
+                    </ul>
+                    <p>Dalam situasi capital rationing, perusahaan harus memilih kombinasi proyek yang memaksimalkan total NPV dengan dana yang tersedia. Salah satu alat bantu yang umum digunakan adalah:</p>
+                    <ul>
+                        <li><strong>Profitability Index (PI):</strong> PI = (PV Arus Kas Masuk) / Investasi Awal = (NPV + Investasi Awal) / Investasi Awal. Proyek dengan PI tertinggi per unit dana yang diinvestasikan biasanya diprioritaskan.</li>
+                    </ul>
+                     <p>Pilih proyek berdasarkan ranking PI tertinggi hingga anggaran habis, sambil memastikan kombinasi proyek memberikan NPV total tertinggi.</p>
+                </div>
+            </details>
+        </section>
+
+        <!-- ================== Materi 9: Imbal Hasil, Risiko, & CAPM ================== -->
+        <section class="topic-section">
+            <h2>Topik 9: Imbal Hasil, Risiko, dan Security Market Line/CAPM (Referensi: Ross Bab 12 & 13)</h2>
+            <p class="sub-cpmk"><strong>Sub CPMK:</strong> Imbal hasil, risiko, dan <em>security market line</em>/CAPM.</p>
+
+            <details class="content-detail">
+                <summary>1. Menghitung Expected Returns & Variances Investasi Tunggal</summary>
+                <div class="content-block">
+                    <p><strong>Expected Return (Imbal Hasil yang Diharapkan):</strong> Rata-rata tertimbang dari kemungkinan imbal hasil di masa depan, di mana bobotnya adalah probabilitas terjadinya masing-masing imbal hasil.</p>
+                    <p>E(R) = Σ [P<sub>i</sub> * R<sub>i</sub>]</p>
+                    <p>Di mana P<sub>i</sub> adalah probabilitas kejadian ke-i, dan R<sub>i</sub> adalah imbal hasil jika kejadian ke-i terjadi.</p>
+                    
+                    <p><strong>Variance (Varians) dan Standard Deviation (Deviasi Standar):</strong> Mengukur volatilitas atau risiko total dari suatu investasi. Varians adalah rata-rata tertimbang dari kuadrat deviasi setiap kemungkinan imbal hasil dari expected return.</p>
+                    <p>Var(R) atau σ<sup>2</sup> = Σ [P<sub>i</sub> * (R<sub>i</sub> - E(R))<sup>2</sup>]</p>
+                    <p><strong>Standard Deviation (σ):</strong> Akar kuadrat dari varians. Ukuran risiko yang lebih mudah diinterpretasikan karena memiliki unit yang sama dengan imbal hasil (%).</p>
+                    <p>σ = √Var(R)</p>
+                    <p>Semakin tinggi deviasi standar, semakin besar potensi penyimpangan imbal hasil aktual dari imbal hasil yang diharapkan, artinya semakin tinggi risiko total investasi tersebut.</p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>2. Memahami Risk-Return Trade-off</summary>
+                <div class="content-block">
+                    <p>Konsep fundamental dalam keuangan: investor hanya bersedia mengambil risiko yang lebih tinggi jika mereka mengharapkan kompensasi berupa potensi imbal hasil yang lebih tinggi pula.</p>
+                    <p>Tidak ada jaminan imbal hasil tinggi, tetapi ada hubungan positif antara tingkat risiko yang diambil dengan tingkat imbal hasil yang *diharapkan* (expected return).</p>
+                    <p>Grafik risk-return trade-off biasanya menunjukkan hubungan positif ini, di mana aset dengan risiko lebih tinggi (deviasi standar lebih tinggi) berada di posisi yang lebih tinggi pada sumbu expected return.</p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>3. Memahami Investasi pada Portofolio</summary>
+                <div class="content-block">
+                    <p><strong>Portofolio:</strong> Kombinasi dari dua atau lebih aset atau investasi yang dimiliki oleh seorang investor.</p>
+                    <p>Investor membentuk portofolio dengan tujuan utama <strong>diversifikasi</strong>, yaitu mengurangi risiko keseluruhan tanpa mengorbankan terlalu banyak potensi imbal hasil.</p>
+                    <p>Imbal hasil portofolio adalah rata-rata tertimbang dari imbal hasil aset-aset individual di dalamnya.</p>
+                    <p>Risiko portofolio (diukur dengan deviasi standar portofolio) tidak hanya bergantung pada risiko aset individual, tetapi juga pada bagaimana imbal hasil aset-aset tersebut bergerak bersama (kovarians atau korelasi).</p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>4. Memahami Expected vs Un-expected Returns</summary>
+                <div class="content-block">
+                    <p>Imbal hasil total (aktual) dari suatu aset dapat dipecah menjadi dua komponen:</p>
+                    <p><strong>Total Return = Expected Return + Unexpected Return</strong></p>
+                    <ul>
+                        <li><strong>Expected Return (E(R)):</strong> Bagian imbal hasil yang diantisipasi atau diharapkan pasar berdasarkan informasi yang tersedia saat ini dan risiko aset.</li>
+                        <li><strong>Unexpected Return (U):</strong> Bagian imbal hasil yang berasal dari kejutan atau informasi baru yang tidak diantisipasi pasar. Rata-rata, unexpected return adalah nol.</li>
+                    </ul>
+                    <p>Kejutan (unexpected return) inilah yang menjadi sumber risiko investasi.</p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>5. Memahami Risiko Sistematis vs Non-sistematis</summary>
+                <div class="content-block">
+                    <p>Komponen imbal hasil yang tidak diharapkan (unexpected return) dapat dibagi lagi menjadi dua jenis risiko:</p>
+                    <ul>
+                        <li><strong>Risiko Sistematis (Systematic Risk):</strong> Juga dikenal sebagai risiko pasar atau risiko yang tidak dapat didiversifikasi (<em>non-diversifiable risk</em>). Mempengaruhi sejumlah besar aset di pasar secara bersamaan. Sumbernya adalah faktor-faktor makroekonomi seperti perubahan suku bunga, inflasi, pertumbuhan PDB, atau peristiwa politik besar. Risiko ini tidak dapat dihilangkan melalui diversifikasi.</li>
+                        <li><strong>Risiko Non-sistematis (Unsystematic Risk):</strong> Juga dikenal sebagai risiko unik, spesifik aset, atau risiko yang dapat didiversifikasi (<em>diversifiable risk</em>). Mempengaruhi satu atau sekelompok kecil aset saja. Sumbernya adalah peristiwa spesifik perusahaan atau industri, seperti pemogokan buruh, keberhasilan produk baru, atau gugatan hukum. Risiko ini dapat dikurangi atau bahkan dihilangkan melalui diversifikasi portofolio yang baik.</li>
+                    </ul>
+                    <p><strong>Total Risk = Systematic Risk + Unsystematic Risk</strong></p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>6. Memahami Dampak Diversifikasi Terhadap Risiko Portofolio</summary>
+                <div class="content-block">
+                    <p><strong>Prinsip Diversifikasi:</strong> Menyebarkan investasi ke berbagai aset yang berbeda dapat secara substansial mengurangi risiko portofolio.</p>
+                    <p>Cara kerja diversifikasi:</p>
+                    <ul>
+                        <li>Ketika aset-aset dalam portofolio tidak berkorelasi sempurna positif (artinya, imbal hasilnya tidak selalu bergerak searah dengan besaran yang sama), maka kejutan positif pada satu aset dapat diimbangi oleh kejutan negatif pada aset lain.</li>
+                        <li>Risiko non-sistematis (yang bersifat unik untuk setiap aset) cenderung saling meniadakan dalam portofolio yang terdiversifikasi dengan baik.</li>
+                        <li>Namun, risiko sistematis (yang mempengaruhi semua aset) tidak dapat dihilangkan melalui diversifikasi karena semua aset cenderung terpengaruh oleh faktor pasar yang sama.</li>
+                    </ul>
+                    <p>Semakin banyak jumlah saham (dari industri berbeda) yang ditambahkan ke portofolio, semakin rendah risiko total portofolio, mendekati tingkat risiko sistematis pasar.</p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>7. Memahami Risiko Sistematis (Beta)</summary>
+                <div class="content-block">
+                    <p>Karena risiko non-sistematis dapat dihilangkan melalui diversifikasi, pasar keuangan hanya memberikan kompensasi (expected return lebih tinggi) untuk menanggung risiko sistematis.</p>
+                    <p><strong>Beta (β):</strong> Ukuran kuantitatif dari risiko sistematis suatu aset relatif terhadap pasar keseluruhan.</p>
+                    <ul>
+                        <li><strong>Beta = 1:</strong> Aset memiliki risiko sistematis yang sama dengan rata-rata pasar. Imbal hasilnya cenderung bergerak sejalan dengan pasar.</li>
+                        <li><strong>Beta > 1:</strong> Aset memiliki risiko sistematis lebih tinggi dari rata-rata pasar. Imbal hasilnya cenderung lebih fluktuatif daripada pasar (naik lebih tinggi saat pasar naik, turun lebih dalam saat pasar turun).</li>
+                        <li><strong>Beta < 1:</strong> Aset memiliki risiko sistematis lebih rendah dari rata-rata pasar. Imbal hasilnya cenderung kurang fluktuatif daripada pasar.</li>
+                        <li><strong>Beta = 0:</strong> Aset tidak memiliki risiko sistematis (contoh teoretis: aset bebas risiko seperti obligasi pemerintah jangka pendek).</li>
+                    </ul>
+                    <p>Beta portofolio adalah rata-rata tertimbang dari beta aset-aset individual di dalamnya.</p>
+                </div>
+            </details>
+
+            <details class="content-detail">
+                <summary>8. Memahami Security Market Line (SML) / CAPM</summary>
+                <div class="content-block">
+                    <p><strong>Capital Asset Pricing Model (CAPM):</strong> Model yang menjelaskan hubungan antara risiko sistematis (diukur dengan Beta) dan expected return untuk aset, terutama saham.</p>
+                    <p><strong>Security Market Line (SML):</strong> Representasi grafis dari CAPM. Menunjukkan tingkat expected return yang seharusnya untuk setiap tingkat risiko sistematis (Beta).</p>
+                    <p>Persamaan SML (Rumus CAPM):</p>
+                    <p><strong>E(R<sub>i</sub>) = R<sub>f</sub> + β<sub>i</sub> * [E(R<sub>m</sub>) - R<sub>f</sub>]</strong></p>
+                    <p>Di mana:</p>
+                    <ul>
+                        <li><strong>E(R<sub>i</sub>):</strong> Expected return aset i.</li>
+                        <li><strong>R<sub>f</sub>:</strong> Risk-free rate (tingkat imbal hasil bebas risiko, misal: suku bunga obligasi pemerintah).</li>
+                        <li><strong>β<sub>i</sub>:</strong> Beta aset i (ukuran risiko sistematis aset i).</li>
+                        <li><strong>E(R<sub>m</sub>):</strong> Expected return pasar keseluruhan (misal: return indeks pasar saham).</li>
+                        <li><strong>[E(R<sub>m</sub>) - R<sub>f</sub>]:</strong> Market Risk Premium (premi risiko pasar), yaitu tambahan imbal hasil yang diharapkan investor untuk menanggung risiko sistematis rata-rata pasar.</li>
+                    </ul>
+                    <p>SML menunjukkan bahwa expected return suatu aset ditentukan oleh:</p>
+                    <ol>
+                        <li>Nilai waktu uang murni (diwakili R<sub>f</sub>).</li>
+                        <li>Kompensasi untuk menanggung risiko sistematis (diwakili oleh premi risiko pasar).</li>
+                        <li>Jumlah risiko sistematis aset tersebut relatif terhadap pasar (diwakili β<sub>i</sub>).</li>
+                    </ol>
+                    <p>Aset yang berada di atas SML dianggap <em>undervalued</em> (menawarkan expected return lebih tinggi dari yang seharusnya untuk risikonya), sementara yang di bawah SML dianggap <em>overvalued</em>.</p>
+                </div>
+            </details>
+
+        </section>
+        
+        <!-- Placeholder untuk Interaktivitas Tambahan -->
+        <section class="interactive-section">
+             <h2>Cek Pemahaman (Contoh)</h2>
+             <div class="quiz-item">
+                 <p><strong>Pertanyaan:</strong> Mana jenis risiko yang dapat dikurangi secara signifikan melalui diversifikasi portofolio?</p>
+                 <button class="toggle-answer-btn">Tampilkan Jawaban</button>
+                 <p class="answer" style="display: none;">Risiko Non-sistematis (Unsystematic Risk / Diversifiable Risk).</p>
+             </div>
+              <div class="quiz-item">
+                 <p><strong>Pertanyaan:</strong> Apa yang diukur oleh Beta (β) dalam konteks CAPM?</p>
+                 <button class="toggle-answer-btn">Tampilkan Jawaban</button>
+                 <p class="answer" style="display: none;">Beta mengukur risiko sistematis (risiko pasar) suatu aset relatif terhadap pasar keseluruhan.</p>
+             </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 - Halaman Interaktif Keuangan Perusahaan.</p>
+         <p style="font-size: 0.8em; color: #ccc;">Disclaimer: Konten ini adalah ringkasan berdasarkan pemahaman umum materi terkait dan silabus yang diberikan. Selalu rujuk pada buku teks dan materi kuliah resmi untuk detail yang paling akurat.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
