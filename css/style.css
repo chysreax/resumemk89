@@ -1,219 +1,279 @@
-/* General Styling */
+/* General Styling - Dark Mode */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif; /* Lebih modern */
+    line-height: 1.7; /* Sedikit lebih lega */
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #1a1d24; /* Dark blue/grey background */
+    color: #e0e0e0; /* Light grey text */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0 20px;
+    max-width: 950px; /* Sedikit lebih lebar */
+    margin: 30px auto;
+    padding: 0 25px;
 }
 
 header {
-    background-color: #005f73; /* Teal dark */
-    color: #fff;
-    padding: 20px 0;
+    background-color: #232730; /* Slightly lighter dark shade */
+    color: #ffffff;
+    padding: 25px 0;
     text-align: center;
-    border-bottom: 5px solid #ee9b00; /* Orange accent */
+    border-bottom: 4px solid #00bcd4; /* Cyan accent */
+    margin-bottom: 30px; /* Jarak dari konten */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.6em;
     font-weight: 600;
+    letter-spacing: 1px; /* Sedikit spasi antar huruf */
 }
 
 header p {
-    margin-top: 5px;
+    margin-top: 8px;
     font-size: 1em;
-    color: #e9d8a6; /* Light gold */
+    color: #bdbdbd; /* Lighter grey for subtitle */
+    font-weight: 300;
 }
 
 footer {
     text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #0a9396; /* Medium teal */
-    color: #e9d8a6; 
+    margin-top: 50px;
+    padding: 25px;
+    background-color: #232730;
+    color: #bdbdbd;
     font-size: 0.9em;
+    border-top: 1px solid #3a3f4b; /* Subtle top border */
 }
 
 /* Topic Section Styling */
 .topic-section {
-    background-color: #fff;
-    margin-bottom: 30px;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-left: 6px solid #0a9396; /* Medium teal accent */
+    background-color: #2a2e37; /* Dark background for sections */
+    margin-bottom: 35px;
+    padding: 30px;
+    border-radius: 12px; /* Lebih bulat */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    border-left: 6px solid #00bcd4; /* Cyan accent */
+    transition: box-shadow 0.3s ease;
 }
 
+.topic-section:hover {
+     box-shadow: 0 8px 20px rgba(0, 188, 212, 0.15); /* Subtle cyan glow on hover */
+}
+
+
 .topic-section h2 {
-    color: #005f73; /* Teal dark */
+    color: #ffffff; /* White headings */
     margin-top: 0;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #e9d8a6; /* Light gold */
+    margin-bottom: 15px;
     padding-bottom: 10px;
+    border-bottom: 1px solid #4f5666; /* Darker divider */
+    font-weight: 600;
+    font-size: 1.8em;
 }
 
 .sub-cpmk {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 20px;
+    font-style: normal; /* Not italic */
+    color: #b0bec5; /* Blue grey */
+    margin-bottom: 25px;
+    font-size: 1.05em;
 }
 
-/* Accordion (Details/Summary) Styling */
+/* Accordion (Details/Summary) Styling - Refined */
 .content-detail {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    background-color: #fdfdfd; /* Slightly off-white */
-    transition: background-color 0.3s ease;
+    border: 1px solid #424857; /* Subtle border */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #313641; /* Darker background for details */
+    overflow: hidden; /* Helps with transitions */
+    transition: background-color 0.4s ease;
 }
 
 .content-detail[open] {
-     background-color: #e9f5f5; /* Light teal when open */
+     background-color: #3a3f4b; /* Slightly lighter when open */
+     border-left: 4px solid #ff9800; /* Orange accent when open */
+     margin-left: -4px; /* Compensate border width */
 }
 
 
 .content-detail summary {
-    padding: 15px;
+    padding: 18px 20px 18px 45px; /* More padding, space for icon */
     font-weight: 600;
-    color: #0077b6; /* Blue */
+    color: #80deea; /* Light cyan for summary text */
     cursor: pointer;
-    outline: none; /* Remove default focus outline */
-    list-style: none; /* Remove default marker */
+    outline: none;
+    list-style: none;
     position: relative;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1em;
 }
 
 .content-detail summary:hover {
-    background-color: #e0f7fa; /* Lighter blue on hover */
+    background-color: #3f4551;
+    color: #ffffff; /* White on hover */
 }
 
-/* Custom marker for accordion */
+/* Custom marker - Smoother Transition */
 .content-detail summary::before {
-    content: '+';
+    content: '▶'; /* Play icon */
     position: absolute;
-    left: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #0077b6;
-    transition: transform 0.3s ease;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    font-size: 1.1em;
+    color: #00bcd4; /* Cyan marker */
+    transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth cubic-bezier */
 }
 
 .content-detail[open] summary::before {
-   transform: rotate(45deg);
-   color: #d00000; /* Red when open */
+   transform: translateY(-50%) rotate(90deg); /* Rotate down */
+   color: #ff9800; /* Orange marker when open */
 }
 
-/* Hide default marker in Webkit browsers */
-.content-detail summary::-webkit-details-marker {
-    display: none;
-}
+.content-detail summary::-webkit-details-marker { display: none; } /* Hide default marker */
 
 
 .content-block {
-    padding: 15px 20px 20px 35px; /* Added left padding */
-    border-top: 1px solid #eee;
-    background-color: #fff; /* White background for content */
+    padding: 10px 25px 20px 25px; /* Consistent padding */
+    border-top: 1px solid #4f5666; /* Subtle divider */
+    background-color: transparent; /* Inherit from parent or set specific dark */
+    color: #c5cae9; /* Lighter purple-ish grey for content text */
+    font-weight: 300; /* Lighter font weight for content */
 }
-
-.content-block p, 
-.content-block ul, 
+.content-block p,
+.content-block ul,
 .content-block ol {
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
 }
-
-.content-block ul, 
-.content-block ol {
-    padding-left: 20px;
-}
-
-.content-block li {
-    margin-bottom: 0.5em;
-}
+.content-block ul,
+.content-block ol { padding-left: 25px; }
+.content-block li { margin-bottom: 0.6em; }
 
 .content-block strong {
-    color: #005f73; /* Teal dark */
+    color: #ffcc80; /* Light orange for emphasis */
+    font-weight: 600;
 }
 
 .content-block code, .content-block p > code {
-    background-color: #eef;
-    padding: 2px 5px;
-    border-radius: 3px;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background-color: #424857; /* Dark grey code background */
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #b3e5fc; /* Light blue code text */
+    font-size: 0.95em;
 }
-
+.content-block small {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    color: #90a4ae; /* Blue grey */
+    font-size: 0.85em;
+}
 
 /* Interactive Section Styling */
 .interactive-section {
-    background-color: #e9d8a6; /* Light gold */
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 30px;
-    border: 2px dashed #005f73; /* Teal dashed border */
+    background-color: #2a2e37; /* Match topic section bg */
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    border: 1px solid #4f5666;
 }
 
 .interactive-section h2 {
-    color: #005f73;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 1.6em;
+    border-bottom: 1px solid #4f5666;
+    padding-bottom: 15px;
 }
 
 .quiz-item {
-    background-color: #fff;
-    padding: 15px;
+    background-color: #313641; /* Match detail background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #0097a7; /* Darker cyan accent */
+    transition: transform 0.2s ease-out, box-shadow 0.3s ease;
+}
+.quiz-item:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.quiz-item p:first-child { /* Target the question */
     margin-bottom: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    color: #e0e0e0;
+    font-weight: 400; /* Regular weight for question */
 }
 
 .toggle-answer-btn {
-    background-color: #0a9396; /* Medium teal */
+    background-color: #00796b; /* Teal button */
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
+    padding: 10px 18px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.95em;
+    font-weight: 600;
     margin-top: 10px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .toggle-answer-btn:hover {
-    background-color: #005f73; /* Darker teal on hover */
+    background-color: #004d40; /* Darker teal on hover */
+    transform: scale(1.03); /* Slightly enlarge */
 }
 
 .answer {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-left: 4px solid #ee9b00; /* Orange accent */
-    color: #333;
-    font-style: italic;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #424857; /* Dark grey for answer block */
+    border-left: 4px solid #ff9800; /* Orange accent */
+    color: #b0bec5; /* Light blue-grey answer text */
+    border-radius: 4px;
+    font-style: normal; /* Not italic */
+    transition: opacity 0.5s ease, max-height 0.5s ease; /* Smooth fade-in/slide-down */
+    opacity: 1; /* Start visible for transition */
+    max-height: 300px; /* Allow space for content */
+    overflow: hidden;
 }
+
+/* Style for hidden answer for transition effect */
+.answer.hidden {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    border-width: 0; /* Hide border when hidden */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2.1em;
     }
     .container {
-        padding: 0 10px;
+        padding: 0 15px;
+        margin-top: 20px;
     }
-    .topic-section {
-        padding: 15px;
+    .topic-section, .interactive-section {
+        padding: 20px;
+        border-radius: 8px;
     }
-    .content-block {
-         padding: 10px 15px 15px 25px;
+    .topic-section h2 {
+        font-size: 1.5em;
     }
-     .content-detail summary {
-        padding: 12px 15px 12px 30px; /* Adjust padding for smaller screens */
+    .content-detail summary {
+        padding: 15px 15px 15px 40px;
+        font-size: 1em;
     }
+     .content-detail summary::before { left: 15px; }
+    .content-block { padding: 10px 20px 15px 20px; }
+    .quiz-item { padding: 15px; }
+    .toggle-answer-btn { padding: 8px 15px; }
 }
